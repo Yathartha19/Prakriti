@@ -18,7 +18,8 @@
 
     <nav>
         <div class="logo"> <a href="{{ url_for('home') }}"> <img src="{{ url_for('static', filename='images/prakriti.png') }}" height= "60"> </a> </div>
-        <div class="cat">
+        <div class="cat" id="cat">
+          <i class="fa fa-times" onclick="hidemenu()"></i>
           <ul class="nav-items">
             <a href="{{ url_for('home') }}">Home</a>
             <a href="{{ url_for('weather') }}">Weather</a>
@@ -30,7 +31,18 @@
             light_mode
           </span>
         </div>
+        <i class="fa fa-bars" onclick="showmenu()"></i>
       </nav>
+
+      <script>
+        var cat = document.getElementById("cat");
+        function showmenu(){
+          cat.style.right = "0";
+        }
+        function hidemenu(){
+          cat.style.right = "-60%";
+        }
+      </script>
 
     {% block body %} {% endblock%}
     

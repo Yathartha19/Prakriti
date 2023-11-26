@@ -1,0 +1,52 @@
+@import url("button_animation.css");
+@import url("theme.css");
+@import url("navbar_footer.css");
+@import url("textbox.css");
+@import url("weather.css");
+@import url("home.css");
+
+
+/*-------------- COMMON STUFF ------------*/
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--foreground-color);
+}
+
+.unmain {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+        url(cloud.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: center center;
+    height: 30rem;
+}
+
+.unmain h1 {
+    text-align: center;
+    padding-top: 15%;
+    font-size: 3rem;
+    color: var(--pure-white-color);
+}
+
+.unmain p {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--pure-white-color);
+}
+
+.unmain-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 3rem calc((100vw - 80rem) / 2);
+}
